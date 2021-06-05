@@ -1,0 +1,98 @@
+.profile {
+  letter-spacing: .3rem;
+	min-height: 100vh;
+	display: grid;
+	grid-gap: 1rem;
+	grid: 'header' auto
+  'nav' auto
+  'main' 1fr
+  'footer' auto
+  / 1fr;
+  color: $color-white;
+  font-family: $game-font;
+  padding: 1rem 1rem;
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__nav {
+    grid-area: nav;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @include media-query(tablet-land) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    & .link-list {
+      margin-top: 1rem;
+      
+      &__title {
+        background: $color-white;
+        color: #021B79;
+        padding: 1rem;
+      }
+      
+      & li {
+        margin-left: 2rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__main {
+    grid-area: main;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &--title {
+      border: .5rem groove #fff;
+      width: auto;
+      padding: 2rem 2.5rem;
+    }
+
+  }
+  
+  &__photo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    & img {
+      border-radius: 50%;
+      width: 150px;
+      align-self: center;
+    }
+  }
+
+  &__return-button {
+    font-size: 2rem;
+    cursor: pointer;
+    animation: blink 1s ease infinite;
+    text-transform: uppercase;
+  }
+
+  &__footer{grid-area: footer;}
+
+  &__header, &__nav, &__main, &__footer {
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+	.profile {
+		grid: 'header header' auto
+			'nav main' 1fr
+			'nav footer' auto
+			/ 25rem 1fr;
+	}
+}

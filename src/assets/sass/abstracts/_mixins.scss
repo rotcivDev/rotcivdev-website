@@ -1,0 +1,46 @@
+@mixin box-center {
+  transform: translate(-50%, -50%);
+}
+
+/* 
+Media Query Manager
+  Viewports:          $breakpoint argument choices:
+    0 - 600px:        Default - Mobile First
+    756px - 1100px:   tablet
+    1100px-1300px:    tablet-land
+    [1300-1800px]     desktop
+    1800px +:         big-desktop
+*/
+
+@mixin media-query($breakpoint) {
+  // mobile first setup
+  // @if $breakpoint == phone {
+  //   @media (max-width: 600px) {
+  //     @content;
+  //   }
+  // }
+
+  @if $breakpoint == tablet {
+    @media (min-width: 765px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-land {
+    @media (min-width: 1100px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.homepage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $color-grey-dark;
+  min-height: 100vh;
+  text-align: center;
+  font-family: $game-font;
+  color: $color-white;
+  overflow: hidden;
+
+  &__title {
+    width: 65vw;
+    padding: 3rem;
+    background: $color-grey-dark;
+    text-transform: uppercase;
+    border: .5rem double $color-white;
+    border-radius: .5rem;
+    font-size: $fs-lg;
+    letter-spacing: 1px; 
+    text-shadow: .2rem .1rem .2rem #c8c8c8;
+  }
+
+  & main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+  }
+
+  &__slide-show {
+    width: 80vw;
+    height: 30rem;
+    border-radius: .5rem;
+    background: url(../assets/img/pintacu.jpg) repeat;
+    background-position: bottom;
+    background-size: contain;
+    animation: moveSlideshow 15s linear infinite;
+    border: .5rem solid #fff;
+    box-shadow: 0 1rem 2rem rgba(#a0a0a0, .3);
+  }
+
+  &__enter-button {
+
+    &-container {
+      height: 2rem;
+    }
+
+    background-color: #fff;
+    color: #282c34;
+    padding: 1.5rem 6rem;
+    font-size: $fs-regular;
+    cursor: pointer;
+    animation: blink 1s ease infinite;
+    letter-spacing: 5px;
+    text-shadow: .2rem .1rem .2rem #282c34;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    
+    &:hover{
+      animation: none;
+      border: .2rem inset #333;
+      transform: translateY(-.2rem);
+      box-shadow: .3rem  .3rem #a0a0a0;
+  
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  
+    &:active{
+      transform: translateY(-.1rem);
+      box-shadow: 0 .5rem 1rem rgba(#a0a0a0, .2);
+    }
+  }
+
+  &__footer {
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
+    &--link {
+      animation: moveInLeft 2s ease-in-out;
+      font-size: $fs-sm;
+    }
+
+    &--message {
+    animation: moveInRight 2s ease-in-out;
+    font-size: $fs-regular;
+      &-heart {
+        color: red;
+        font-size: 3rem;
+        padding: 1rem;
+      }
+    } 
+  } 
+}
