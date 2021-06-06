@@ -7,20 +7,18 @@
   background-color: $color-grey-dark;
   min-height: 100vh;
   text-align: center;
-  font-family: $game-font;
   color: $color-white;
   overflow: hidden;
 
-  &__title {
+  &__title--container {
     width: 65vw;
+    max-width: 1200px;
     padding: 3rem;
     background: $color-grey-dark;
     text-transform: uppercase;
     border: .5rem double $color-white;
     border-radius: .5rem;
-    font-size: $fs-lg;
-    letter-spacing: 1px; 
-    text-shadow: .2rem .1rem .2rem #c8c8c8;
+   
   }
 
   & main {
@@ -32,10 +30,10 @@
 
   &__slide-show {
     width: 80vw;
+    max-width: 1400px;
     height: 30rem;
     border-radius: .5rem;
     background: url(../assets/img/pintacu.jpg) repeat;
-    background-position: bottom;
     background-size: contain;
     animation: moveSlideshow 15s linear infinite;
     border: .5rem solid #fff;
@@ -48,13 +46,13 @@
       height: 2rem;
     }
 
-    background-color: #fff;
-    color: #282c34;
     padding: 1.5rem 6rem;
+    background-color: $color-white;
+    color: $color-grey-dark;
     font-size: $fs-regular;
     cursor: pointer;
-    animation: blink 1s ease infinite;
-    letter-spacing: 5px;
+    animation: $blink-animation;
+    letter-spacing: $letter-spacing-button;
     text-shadow: .2rem .1rem .2rem #282c34;
     text-transform: uppercase;
     border-radius: .5rem;

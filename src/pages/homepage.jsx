@@ -6,10 +6,9 @@ import Button from '../components/button.component';
 function HomePage() {
   return(
     <div className="homepage u-center-text">
-      <header>
-        <h1 className='homepage__title'>
+      <header className='homepage__title--container'>
+        <h1 className="title">
             rotcivDev's Coding Adventures
-          <span className='homepage__title--main' />
         </h1>
       </header>
 

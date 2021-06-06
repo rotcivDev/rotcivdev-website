@@ -6,13 +6,13 @@ import profilePhoto from '../assets/img/eu_lis.jpg';
 function ProfilePage() {
   return<section className='profile'>
     <header className='profile__header'>
-      <h1>Developer Sheet</h1>
+      <h1 className='title'>Developer Sheet</h1>
     </header>
 
     <nav className='profile__nav'>
       <div className="profile__photo">
         <img src={profilePhoto} alt="" />
-        <h2>Victor Salles</h2>
+        <h2 className='subtitle'>Victor Salles</h2>
       </div>
       <ul className='link-list'>
         <p className='link-list__title'>Projects List</p>
@@ -21,7 +21,7 @@ function ProfilePage() {
             href="https://rotcivdev-weather.herokuapp.com/"
             className="u-underline-onhover"
           >
-            getWeather.
+            getWeather
           </a>
         </li>
       </ul>
@@ -33,7 +33,9 @@ function ProfilePage() {
     </main>
 
     <footer className='profile__footer'>
-     
+     <a href="https://www.linkedin.com/in/victor-almeida-4a9032141/">LinkedIn</a>
+     <a href="https://github.com/rotcivDev/rotcivdev-website">Github</a>
+     <a href="mailto:vsallesa@gmail.com">Email</a>
     </footer>
   </section>;
 }

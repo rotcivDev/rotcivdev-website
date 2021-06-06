@@ -1,5 +1,5 @@
 .profile {
-  letter-spacing: .3rem;
+  letter-spacing: $letter-spacing-text;
 	min-height: 100vh;
 	display: grid;
 	grid-gap: 1rem;
@@ -9,7 +9,6 @@
   'footer' auto
   / 1fr;
   color: $color-white;
-  font-family: $game-font;
   padding: 1rem 1rem;
 
   &__header {
@@ -20,26 +19,28 @@
     grid-area: nav;
     
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    @include media-query(tablet-land) {
-      flex-direction: column;
-      justify-content: flex-start;
-    }
+    flex-direction: column;
+    justify-content: flex-start;
 
     & .link-list {
       margin-top: 1rem;
+      border: 5px solid $color-white;
+      border-radius: 6px;
+      padding: 0 0 20px 0;
       
       &__title {
         background: $color-white;
-        color: #021B79;
+        color: $color-blue-dark;
         padding: 1rem;
+        text-decoration: underline;
+        text-decoration-color: $color-blue-dark;
+        
       }
       
       & li {
-        margin-left: 2rem;
+        margin-left: 3rem;
         margin-top: 1rem;
+        list-style-type: circle;
       }
     }
   }
@@ -66,25 +67,30 @@
     text-align: center;
     & img {
       border-radius: 50%;
-      width: 150px;
+      width: 130px;
       align-self: center;
     }
   }
 
   &__return-button {
-    font-size: 2rem;
-    cursor: pointer;
-    animation: blink 1s ease infinite;
+    font-size: $fs-regular;
+    animation: $blink-animation;
+    letter-spacing: $letter-spacing-button;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
-  &__footer{grid-area: footer;}
+  &__footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+  }
 
   &__header, &__nav, &__main, &__footer {
-    background: #0575E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 1rem;
+    background: $color-blue-light;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, $color-blue-dark, $color-blue-light);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, $color-blue-dark, $color-blue-light); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1rem 2rem;
   }
 }
 

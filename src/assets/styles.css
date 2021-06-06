@@ -58,35 +58,33 @@ Media Query Manager
 
 a {
   text-decoration: none;
-  color: #f6f6;
   text-decoration-color: none; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 48%; }
+  @media (min-width: 1100px) {
+    html {
+      font-size: 62.5%; } }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 80%; } }
 
 body {
-  box-sizing: border-box; }
-
-@media only screen and (max-width: 380px) {
-  html {
-    font-size: 38%; } }
-
-@media only screen and (min-width: 400px) {
-  html {
-    font-size: 48%; } }
-
-@media only screen and (min-width: 700px) {
-  html {
-    font-size: 62.5%; } }
-
-@media only screen and (min-width: 1500px) {
-  html {
-    font-size: 70%; } }
+  box-sizing: border-box;
+  max-width: 1800px; }
+  @media (min-width: 1800px) {
+    body {
+      display: block;
+      margin: 0 auto; } }
 
 body {
   font-weight: 400;
   line-height: 1.7;
-  color: #282c34; }
+  color: #282c34;
+  font-family: "Press Start 2P", cursive; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
 
 a {
   text-decoration: none;
@@ -95,49 +93,13 @@ a {
   a :active, a ::after, a :visited {
     color: #f9f9f9; }
 
-.heading-primary {
-  color: #f9f9f9;
-  text-transform: uppercase;
-  backface-visibility: hidden; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    text-shadow: .2rem .1rem .2rem #c8c8c8;
-    letter-spacing: .6rem;
-    padding: 4rem 4rem;
-    animation: blink 10s linear infinite; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
+.title {
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  text-shadow: .2rem .1rem .2rem #c8c8c8; }
 
-.heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  background-clip: text;
-  color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
-  .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.25); }
-
-.heading-tertiary {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase; }
-
-.paragraph {
-  font-size: 1.6rem; }
-  .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
+.subtitle {
+  font-size: 1.4rem; }
 
 .u-center-text {
   text-align: center; }
@@ -221,19 +183,16 @@ a {
   background-color: #282c34;
   min-height: 100vh;
   text-align: center;
-  font-family: "Press Start 2P", cursive;
   color: #f9f9f9;
   overflow: hidden; }
-  .homepage__title {
+  .homepage__title--container {
     width: 65vw;
+    max-width: 1200px;
     padding: 3rem;
     background: #282c34;
     text-transform: uppercase;
     border: 0.5rem double #f9f9f9;
-    border-radius: .5rem;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    text-shadow: .2rem .1rem .2rem #c8c8c8; }
+    border-radius: .5rem; }
   .homepage main {
     display: flex;
     flex-direction: column;
@@ -241,18 +200,18 @@ a {
     justify-content: baseline; }
   .homepage__slide-show {
     width: 80vw;
+    max-width: 1400px;
     height: 30rem;
     border-radius: .5rem;
     background: url(../assets/img/pintacu.jpg) repeat;
-    background-position: bottom;
     background-size: contain;
     animation: moveSlideshow 15s linear infinite;
     border: .5rem solid #fff;
     box-shadow: 0 1rem 2rem rgba(160, 160, 160, 0.3); }
   .homepage__enter-button {
-    background-color: #fff;
-    color: #282c34;
     padding: 1.5rem 6rem;
+    background-color: #f9f9f9;
+    color: #282c34;
     font-size: 1.4rem;
     cursor: pointer;
     animation: blink 1s ease infinite;
@@ -291,34 +250,35 @@ a {
         padding: 1rem; }
 
 .profile {
-  letter-spacing: .3rem;
+  letter-spacing: 1.5px;
   min-height: 100vh;
   display: grid;
   grid-gap: 1rem;
   grid: 'header' auto 'nav' auto 'main' 1fr 'footer' auto / 1fr;
   color: #f9f9f9;
-  font-family: "Press Start 2P", cursive;
   padding: 1rem 1rem; }
   .profile__header {
     grid-area: header; }
   .profile__nav {
     grid-area: nav;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; }
-    @media (min-width: 1100px) {
-      .profile__nav {
-        flex-direction: column;
-        justify-content: flex-start; } }
+    flex-direction: column;
+    justify-content: flex-start; }
     .profile__nav .link-list {
-      margin-top: 1rem; }
+      margin-top: 1rem;
+      border: 5px solid #f9f9f9;
+      border-radius: 6px;
+      padding: 0 0 20px 0; }
       .profile__nav .link-list__title {
         background: #f9f9f9;
         color: #021B79;
-        padding: 1rem; }
+        padding: 1rem;
+        text-decoration: underline;
+        text-decoration-color: #021B79; }
       .profile__nav .link-list li {
-        margin-left: 2rem;
-        margin-top: 1rem; }
+        margin-left: 3rem;
+        margin-top: 1rem;
+        list-style-type: circle; }
   .profile__main {
     grid-area: main;
     text-align: center;
@@ -336,15 +296,18 @@ a {
     text-align: center; }
     .profile__photo img {
       border-radius: 50%;
-      width: 150px;
+      width: 130px;
       align-self: center; }
   .profile__return-button {
-    font-size: 2rem;
-    cursor: pointer;
+    font-size: 1.4rem;
     animation: blink 1s ease infinite;
-    text-transform: uppercase; }
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer; }
   .profile__footer {
-    grid-area: footer; }
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around; }
   .profile__header, .profile__nav, .profile__main, .profile__footer {
     background: #0575E6;
     /* fallback for old browsers */
@@ -352,7 +315,7 @@ a {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #021B79, #0575E6);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 1rem; }
+    padding: 1rem 2rem; }
 
 @media (min-width: 800px) {
   .profile {

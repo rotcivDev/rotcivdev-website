@@ -8,30 +8,40 @@
 
 a{
   text-decoration: none;
-  color: #f6f6;
   text-decoration-color: none;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 48%;
+
+  @include media-query(tablet-land) { font-size: 62.5%;}
+
+  @include media-query(big-desktop) { font-size: 80%;}
+
 }
 
 body {
   box-sizing: border-box;
+  max-width: 1800px;
+
+  @include media-query(big-desktop) {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-@media only screen and (max-width: 380px) {
-  html {font-size: 38%; }
-}
+// @media only screen and (max-width: 380px) {
+//   html {font-size: 38%; }
+// }
 
-@media only screen and (min-width: 400px) {
-  html {font-size: 48%; }
-}
+// @media only screen and (min-width: 400px) {
+//   html {font-size: 48%; }
+// }
 
-@media only screen and (min-width: 700px) {
-  html {font-size: 62.5%; }
-}
+// @media only screen and (min-width: 700px) {
+//   html {font-size: 62.5%; }
+// }
 
-@media only screen and (min-width: 1500px) {
-  html {font-size: 70%; }
-}
+// @media only screen and (min-width: 1500px) {
+//   html {font-size: 70%; }
+// }
