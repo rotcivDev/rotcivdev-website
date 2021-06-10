@@ -1,21 +1,17 @@
 import React from 'react';
-import { adventurers } from '../data/adventurers';
+import { skillsData } from '../data/skills';
 
 export default function SkillsCollection() {
-  const collection = adventurers;
+  const collection = skillsData;
 
   return(
     <section className='adventures-collection'>
-      {collection.map(({id, name, role, profession, race,icon}) => {
+      {collection.map(({ name }, INDEX) => {
         return(
-        <div key={id} className='adventures-collection__card'>
-          <img src={icon} className='adventures-collection__card--image' />
-          <ul className='adventures-collection__card--atributes'>
+        <div key={INDEX}>
+          <ul>
             <h5>nome: <span>{name}</span></h5>
-            <h5>{race}</h5>
-            <h5>{role}</h5>
-            <h5>{profession}</h5>
-          </ul>       
+          </ul>
         </div>
         );
       })}
