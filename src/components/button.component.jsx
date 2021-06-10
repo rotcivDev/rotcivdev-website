@@ -1,16 +1,17 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function Button({linkUrl, history, match, title, className}) {
-  // const css = `${className}`;
+const  Button = props => {
+  const {linkUrl, history, title, className,...anotherProps} = props;
   return(
-    <nav
+    <Link
       className={className}
-      onClick={() => history.push(`${linkUrl}`)}
+      to={linkUrl}
+      {...anotherProps}
     >
       {title}
-    </nav>
+    </Link>
   );
 }
 
-export default withRouter(Button);
+export default Button;
