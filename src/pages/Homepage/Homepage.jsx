@@ -1,18 +1,16 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-
-import Button from '../components/button.component';
+import Button from '../../components/button.component';
 
 function HomePage() {
   return(
-    <div className="homepage u-center-text">
-      <header className='homepage__title--container'>
+    <div className="homepage u-center-text" data-testid="homepageContainer">
+      <header className='homepage__title--container' data-testid="header">
         <h1 className="title">
             rotcivDev's Coding Adventures
         </h1>
       </header>
 
-      <main>
+      <main data-testid="main">
         <div className='homepage__slide-show' />
       </main>
 
@@ -21,10 +19,11 @@ function HomePage() {
           linkUrl='profile' 
           title='Enter'
           className='homepage__enter-button'
-        />
+          data-testid="enterbutton"
+        ></Button>
       </section>
 
-      <footer className="homepage__footer">
+      <footer className="homepage__footer" data-testid="footer">
         <a
           className='homepage__footer--link u-underline-onhover' 
           href="https://www.github.com/rotcivdev"
@@ -48,4 +47,4 @@ function HomePage() {
   );
 }
   
-export default withRouter(HomePage);
+export default (HomePage);

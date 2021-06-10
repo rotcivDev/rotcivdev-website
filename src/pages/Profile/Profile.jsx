@@ -1,20 +1,20 @@
 import React from 'react';
 
-import ReturnButton from '../components/button.component';
-import profilePhoto from '../assets/img/eu_lis.jpg';
+import ReturnButton from '../../components/button.component';
+import profilePhoto from '../../assets/img/eu_lis.jpg';
 
 function ProfilePage() {
-  return<section className='profile'>
-    <header className='profile__header'>
+  return<section className='profile' data-testid="profileContainer">
+    <header className='profile__header' data-testid="header">
       <h1 className='title'>Developer Sheet</h1>
     </header>
 
-    <nav className='profile__nav'>
+    <nav className='profile__nav' data-testid="profile">
       <div className="profile__photo">
-        <img src={profilePhoto} alt="" />
+        <img src={profilePhoto} alt="profilePhoto" />
         <h2 className='subtitle'>Victor Salles</h2>
       </div>
-      <ul className='link-list'>
+      <ul className='link-list' data-testid="projectsList">
         <p className='link-list__title'>Projects List</p>
         <li>
           <a 
@@ -27,12 +27,17 @@ function ProfilePage() {
       </ul>
     </nav>
 
-    <main className='profile__main'>
+    <main className='profile__main' data-testid="main">
       Under construction ...
-      <ReturnButton title='Return' linkUrl='/' className='profile__return-button'/>
+      <ReturnButton 
+        title='Return' 
+        linkUrl='/'
+        className='profile__return-button'
+        data-testid="returnButton"
+      />
     </main>
 
-    <footer className='profile__footer'>
+    <footer className='profile__footer' data-testid="footer">
      <a href="https://www.linkedin.com/in/victor-almeida-4a9032141/">LinkedIn</a>
      <a href="https://github.com/rotcivDev/rotcivdev-website">Github</a>
      <a href="mailto:vsallesa@gmail.com">Email</a>
