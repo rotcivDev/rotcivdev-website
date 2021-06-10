@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Should render App in homepage 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="homepage u-center-text"
+        data-testid="homepageContainer"
+      >
+        <header
+          class="homepage__title--container"
+          data-testid="header"
+        >
+          <h1
+            class="title"
+          >
+            rotcivDev's Coding Adventures
+          </h1>
+        </header>
+        <main
+          data-testid="main"
+        >
+          <div
+            class="homepage__slide-show"
+          />
+        </main>
+        <section
+          class="homepage__enter-button-container"
+        >
+          <a
+            class="homepage__enter-button"
+            data-testid="enterbutton"
+            href="/profile"
+          >
+            Enter
+          </a>
+        </section>
+        <footer
+          class="homepage__footer"
+          data-testid="footer"
+        >
+          <a
+            class="homepage__footer--link u-underline-onhover"
+            href="https://www.github.com/rotcivdev"
+          >
+            github: rotcivDev
+          </a>
+          <h5
+            class="homepage__footer--message"
+          >
+            Development with
+            <span
+              aria-label="heart emoji"
+              class="homepage__footer--message-heart"
+              role="img"
+            >
+              ♥️
+            </span>
+            to improve life!
+          </h5>
+        </footer>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="homepage u-center-text"
+      data-testid="homepageContainer"
+    >
+      <header
+        class="homepage__title--container"
+        data-testid="header"
+      >
+        <h1
+          class="title"
+        >
+          rotcivDev's Coding Adventures
+        </h1>
+      </header>
+      <main
+        data-testid="main"
+      >
+        <div
+          class="homepage__slide-show"
+        />
+      </main>
+      <section
+        class="homepage__enter-button-container"
+      >
+        <a
+          class="homepage__enter-button"
+          data-testid="enterbutton"
+          href="/profile"
+        >
+          Enter
+        </a>
+      </section>
+      <footer
+        class="homepage__footer"
+        data-testid="footer"
+      >
+        <a
+          class="homepage__footer--link u-underline-onhover"
+          href="https://www.github.com/rotcivdev"
+        >
+          github: rotcivDev
+        </a>
+        <h5
+          class="homepage__footer--message"
+        >
+          Development with
+          <span
+            aria-label="heart emoji"
+            class="homepage__footer--message-heart"
+            role="img"
+          >
+            ♥️
+          </span>
+          to improve life!
+        </h5>
+      </footer>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
