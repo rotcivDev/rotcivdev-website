@@ -28,5 +28,4 @@ Still under construction and receiving continuouns integration.
 - Write content and styles for the MAIN area;
 - Migrate the project to Typescript;
 - Implement Styled Components;
-- Deploy and attach other "local" projects to the Project List Component;
 - Provide my Curriculum for viewing and PDF printing;
