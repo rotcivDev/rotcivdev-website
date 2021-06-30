@@ -1,14 +1,12 @@
-import { Switch, Route, Router } from 'react-router-dom';
-import HomePage from '../pages/Homepage/Homepage';
-import Profile from '../pages/Profile/Profile';
-import { createMemoryHistory } from 'history';
+import { Switch, Route } from "react-router-dom";
+import HomePage from "../pages/Homepage/Homepage";
+import Profile from "../pages/Profile/Profile";
 
 export default function AppRouter() {
-  const history = createMemoryHistory();
-  return<Router history={history}>
+  return (
     <Switch>
-      <Route exact path='/' component={HomePage}/>
-      <Route exact path='/profile' component={Profile}/>
+      <Route exact path="/" component={HomePage} />
+      <Route path="/profile" component={Profile} />
     </Switch>
-  </Router>
+  );
 }
